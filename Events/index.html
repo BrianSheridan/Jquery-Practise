@@ -35,57 +35,43 @@
       <h1>Jquery Practise</h1>
   </header>
   <div id="container">
-  <h1 id="heading1">Heading One</h1>
-  <p id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-  Libero, non magni laboriosam quia dolore cumque tempore debitis
-  necessitatibus praesentium cupiditate nostrum? Minima iste, nam ex accusantium
-  obcaecati <span>non quam qui aspernatur</span> ipsum expedita quas veniam numquam
-  soluta doloremque. Qui nulla, animi asperiores aliquid illo veritatis nam itaque ipsa provident!</p>
-
-  <h1 class="heading2">Heading One</h1>
-  <p class="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-  Libero, non magni laboriosam quia dolore cumque tempore debitis
-  necessitatibus praesentium cupiditate nostrum? Minima iste, nam ex accusantium
-  obcaecati <span>non quam qui aspernatur</span> ipsum expedita quas veniam numquam
-  soluta doloremque. Qui nulla, animi asperiores aliquid illo veritatis nam itaque ipsa provident!</p>
-  
-
-  <ul id="list">
-      <li>List Item</li>
-      <li>List item</li>
-      <li>List item</li>
-      <li>List item</li>
-      <li>List item</li>
-      <li>List item</li>
-      <li>List item</li>
-  </ul>
-
-  <input type="button" value="Button 1">
-  <input type="submit" value="Submit">
-  <input type="text">
-
-  <a href="http://google.com">Google</a>
-  <a href="http://arsenal.com">Arsenal</a>
-
+     <h3>Mouse Events</h3>
+     <button id="btn1">Button 1</button>
+     <button id="btn2">Button 2</button>
+     <p class="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+     Mollitia harum provident a blanditiis quis, non ratione repellendus 
+     corrupti nemo voluptatum?</p>
   </div>
-  
+
   <script>
-      //$('h1').hide();
-      //$('h1#heading1').hide();
-      //$('.heading2').hide();
-      //$('p span').css('color', 'red');
+      $(document).ready(function(){
 
-        $('ul#list li:first').css('color', 'red');
-        $('ul#list li:last').css('color', 'red');
-        $('ul#list li:even').css('background-color', 'yellow');
-        $('ul#list li:odd').css('background-color', '#cccccc');
+      
+      
+      
+    //   $('#btn1').click(function(){
+    //       alert('Button Clicked!');
+    //   });
 
-      // Grabbing Button Types
+    // $('#btn1').on('click', function(){
+    //    // $('.para2').hide();
+    //       $('.para2').toggle();
+    //  });
 
-      //$(':button').hide();
-      $('[href]').css('color', 'red');
-      $('a[href="http://arsenal.com"]').css('color', 'green');  
+    // $('#btn2').on('click', function(){
+    //     $('.para2').show();
+    //  });
 
+    //   
+    
+    //   $('#btn1').hover(function(){
+    //       $('.para2').toggle();
+    //   });
+
+         $('#btn1').click(function(e){
+             console.log(e);
+         });
+    });
   </script>
 </body>
 </html>
