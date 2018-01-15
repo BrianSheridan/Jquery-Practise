@@ -42,13 +42,17 @@
      <button id="btn1">Button 1</button>
      <p class="para1">This is a paragraph</p>
      <p class="para2">This is another paragraph</p>
+     <h4>Hello World</h4>
      <div id="myDiv"></div>
-     <ul>
+     <input type="text" id="newItem">
+     <ul id="list">
          <li>List Item 1</li>
          <li>List Item 2</li>
          <li>List Item 3</li>
          <li>List Item 4 </li>
      </ul>
+     <a href="http://google.com">Google</a>
+     <ul id="users"></ul>
   </div>
 
   <script>
@@ -65,9 +69,37 @@
 
         // $('#myDiv').text('Hello World');
 
-        $('ul').append('<li>Append List Item</li>');
-        $('ul').prepend('<li>Append List Item</li>');
+        // $('ul').append('<li>Append List Item</li>');
+        // $('ul').prepend('<li>Append List Item</li>');
+
+        // $('ul').after('<h4>Hello</h4>')
+
+        // $('a').attr('target', '_blank');
+        // $('a').removeAttr('target');
+
+        // $('p').wrap('<h1>');
+
+        $('#newItem').keyup(function(e){
+            var code = e.which;
+            if(code == 13){
+                e.preventDefault();
+                $('ul').append('<li>'+e.target.value+'</li>');
+            }
+        });
+
+        // var myArr = ['Brad', 'Kelly', 'Nate', 'Jose', 'Dec', 'Joe'];
+
+        // $.each(myArr, function(i, val){
+        //     $('#users').append('<li>'+val+'</li>');
+        // });
+
+        var newArr = $('ul#list li').toArray();
+        $.each(newArr, function(i, val){
+            console.log(val.innerHTML);
+        })
            
+
+        
     });
   </script>
 </body>
